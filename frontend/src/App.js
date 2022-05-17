@@ -13,9 +13,6 @@ function App() {
             <Route exact path="/">
               <ContactPage />
             </Route>
-            <Route path="/:id">
-              <Detail />
-            </Route>
           </Switch>
         </Router>
       </header>
