@@ -1,5 +1,4 @@
 import React from "react";
-import {Link} from "react-router-dom"
 
 export const Card = ({ listOfContacts }) => {
   return (
@@ -10,7 +9,7 @@ export const Card = ({ listOfContacts }) => {
             
           <ul key={contact.id}>
 
-            <li className="links"><Link to={`${contact.id}`}>{contact.name}: {contact.phone_number}</Link></li>
+            <li className="links">{contact.name}: {contact.phone_number}</li>
           </ul>
         );
       })}
