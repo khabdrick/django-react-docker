@@ -1,8 +1,5 @@
-FROM ubuntu:20.04
-
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    python3.8 \
-    python3-pip 
+FROM python:3.8.2
+ENV PYTHONUNBUFFERED 1
 
 WORKDIR /api
  
