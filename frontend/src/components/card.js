@@ -9,7 +9,6 @@ export const Card = ({ listOfContacts }) => {
         return (
             
           <ul key={contact.id}>
-              
 
             <li className="links"><Link to={`${contact.id}`}>{contact.name}: {contact.phone_number}</Link></li>
           </ul>
