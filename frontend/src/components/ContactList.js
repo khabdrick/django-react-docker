@@ -35,7 +35,6 @@ export const ContactPage = () => {
     })
       .then((response) => response.json())
       .then((message) => {
-        console.log(message);
         getUpdate();
       });
   };

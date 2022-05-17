@@ -16,12 +16,9 @@ export const Form = () => {
       data: formField,
     })
       .then((response) => {
-        console.log(response.data);
         // history.push('/')
       })
-      .then((response) => console.log(response))
       .then((data) => {
-        console.log("dddddddd", data);
         // getUpdate();
       });
   };

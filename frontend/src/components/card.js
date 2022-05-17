@@ -4,7 +4,6 @@ export const Card = ({ listOfContacts }) => {
   return (
     <>
       {listOfContacts.map(contact => {
-          console.log(contact.id)
         return (
             
           <ul key={contact.id}>
