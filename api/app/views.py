@@ -11,8 +11,6 @@ def api_endpoints(request):
     api_urls = {
         'contact_list': '/',
         'Add': '/create',
-        'Update': '/update/pk',
-        'Delete': '/contact/pk/delete'
     }
   
     return Response(api_urls)
@@ -27,21 +25,9 @@ def create_contact(request):
 	else:
 		return Response(status=status.HTTP_404_NOT_FOUND)
 
-class ContactDetail(generics.RetrieveAPIView):
-    queryset = Contact.objects.all()
-    serializer_class = ContactSerializer
 
 
 class ContactList(generics.ListCreateAPIView):
     queryset = Contact.objects.all()
     serializer_class = ContactSerializer
 
-class UpdateContact(generics.UpdateAPIView):
-    queryset = Contact.objects.all()
-    serializer_class = ContactSerializer
-
-@api_view(['DELETE', "GET"])
-def delete_contact(request, pk):
-    contact = get_object_or_404(Contact, pk=pk)
-    contact.delete()
-    return Response(status=status.HTTP_202_ACCEPTED)
